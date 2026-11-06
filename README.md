@@ -9,6 +9,28 @@
 
 Tech Blocker Radar is an agent skill for the moment you are stuck: a platform bug, a version-specific API, a rendering artifact, a packaging failure. It turns the symptom into a searchable fingerprint, searches GitHub issues and PRs, Stack Overflow, source code, and official docs, then returns candidate approaches with version and platform constraints and a verification plan.
 
+## Install for Claude Code
+
+### Option A: npx skills (recommended)
+
+Requires Node.js 22.20+.
+
+```bash
+npx skills add HamsterVV/tech-blocker-radar --skill tech-blocker-radar -a claude-code -g -y
+```
+
+### Option B: manual
+
+```bash
+git clone https://github.com/HamsterVV/tech-blocker-radar.git
+mkdir -p ~/.claude/skills
+cp -r tech-blocker-radar/skills/tech-blocker-radar ~/.claude/skills/
+```
+
+Restart Claude Code if the skill does not appear in its skills list.
+
+For other SKILL.md-compatible agents, use the same `npx skills add` command without `-a claude-code`, or copy the skill into that agent's skills directory.
+
 ## Why
 
 Most coding agents answer from memory. That is fast, but memory produces plausible fixes that do not match your OS, framework version, or exact symptom. This skill forces evidence:
@@ -17,26 +39,6 @@ Most coding agents answer from memory. That is fast, but memory produces plausib
 - Read the actual PR diff, issue thread, or accepted answer.
 - Separate facts from inferences.
 - End with a minimal reproduction and a target-environment verification plan.
-
-## Install
-
-Requires Node.js 22.20+ for `npx skills`.
-
-```bash
-# Preview the skill in this repo
-npx skills add HamsterVV/tech-blocker-radar --list
-
-# Install it
-npx skills add HamsterVV/tech-blocker-radar --skill tech-blocker-radar
-```
-
-Manual install for Claude Code or any agent with a skills directory:
-
-```bash
-git clone https://github.com/HamsterVV/tech-blocker-radar.git
-cp -r tech-blocker-radar/skills/tech-blocker-radar ~/.claude/skills/
-# Other agents: use the agent's skills directory
-```
 
 ## Requirements
 
