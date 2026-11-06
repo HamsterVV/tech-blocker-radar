@@ -30,12 +30,11 @@ npx skills add HamsterVV/tech-blocker-radar --list
 npx skills add HamsterVV/tech-blocker-radar --skill tech-blocker-radar
 ```
 
-Manual install for Qoder, Claude Code, or any agent with a skills directory:
+Manual install for Claude Code or any agent with a skills directory:
 
 ```bash
 git clone https://github.com/HamsterVV/tech-blocker-radar.git
-cp -r tech-blocker-radar/skills/tech-blocker-radar ~/.qoder-cn/skills/
-# Claude Code: ~/.claude/skills/
+cp -r tech-blocker-radar/skills/tech-blocker-radar ~/.claude/skills/
 # Other agents: use the agent's skills directory
 ```
 
@@ -101,11 +100,11 @@ skills/tech-blocker-radar/
 └── scripts/tech_scan.py
 ```
 
-`tools/validate_skill.py` checks the frontmatter and keeps the skill English-only and case-study-free.
+`tools/validate_skill.py` checks the `SKILL.md` frontmatter.
 
 ## Contributing
 
-Open an issue with a real blocker, the environment, and what you already tried. PRs should keep `SKILL.md` concise, English-only, and free of long case studies.
+Open an issue with a real blocker, the environment, and what you already tried. PRs should keep `SKILL.md` concise and focused on the search workflow.
 
 ## License
 
