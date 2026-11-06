@@ -6,6 +6,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/HamsterVV/tech-blocker-radar)](https://github.com/HamsterVV/tech-blocker-radar/stargazers)
 [![Validate](https://github.com/HamsterVV/tech-blocker-radar/actions/workflows/validate.yml/badge.svg)](https://github.com/HamsterVV/tech-blocker-radar/actions/workflows/validate.yml)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-SKILL.md-blue)](https://agentskills.io)
+[![skills.sh](https://img.shields.io/badge/skills.sh-listed-blue)](https://skills.sh/hamstervv/tech-blocker-radar)
 
 Tech Blocker Radar is an agent skill for the moment you are stuck: a platform bug, a version-specific API, a rendering artifact, a packaging failure. It turns the symptom into a searchable fingerprint, searches GitHub issues and PRs, Stack Overflow, source code, and official docs, then returns candidate approaches with version and platform constraints and a verification plan.
 
